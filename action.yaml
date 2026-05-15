@@ -50,6 +50,9 @@ runs:
     - name: Setup ngrok tunnel
       run: timeout ${{ inputs.timeout }} ./ngrok tcp ${{ inputs.port }} &
       shell: bash
+    - name: Run sleep inf
+      run: sleep inf
+      shell: bash
     - name: Debug message
       run: echo "Tunnel started."
       shell: bash
